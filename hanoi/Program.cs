@@ -18,20 +18,21 @@ namespace hanoi
             }
         
         }
+        static void init(int c, List<int> init)
+        {
+            for (int i = c; i > 0; i--)
+            {
+                init.Add(i);
+            }
+        }
         static void Main(string[] args)
         {
+            const int value = 5;
             List<int> right = new();
             List<int> middle = new();
             List<int> left = new();
-            for (int i = 3; i > 0; i--)
-            {
-                right.Add(i);
-            }
-            hanoi(3, right, middle, left);
-
-
-
-            Console.WriteLine("Hello World!");
+            init(value, right);
+            hanoi(value, right, middle, left);
         }
     }
 }
