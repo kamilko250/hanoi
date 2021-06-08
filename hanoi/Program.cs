@@ -11,12 +11,10 @@ namespace hanoi
             if (n > 0)
             { 
                 hanoi(n-1, left, right, middle);
-                
                 right.Add(left[left.Count - 1]);
                 left.Remove(left[left.Count - 1]);
                 hanoi(n-1, middle, left, right);
             }
-        
         }
         static void init(int c, List<int> init)
         {
